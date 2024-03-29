@@ -3,34 +3,138 @@ body{
     padding: 0;
     background-color: hsl(0, 0%, 86%);
     font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 .container{
-    width: 65vw;
-    margin: 150px;
-    padding: 45px 15px;
+    width: 80%;
+    max-width: 600px;
+    padding: 45px 5%;
     display: flex;
-    
-    justify-content: flex-start ;
     flex-direction: column;
-    max-width: auto;
     background-color: white;
     border-radius: 15px;
     border-bottom-right-radius: 70px;
 }
 .date{
     display: flex;
-    justify-content: ;
+    border-bottom:hsl(0, 1%, 44%) 1px solid;
+    width: 100%;
 }
 
 .champ{
-    margin-right: 25px;
+    margin-right: 10%; 
+    flex: 1; 
+    flex-basis: 30%;
 }
 
-h1{
-    color:hsl(0, 1%, 44%) ;
+.champ h1{
+    color:hsl(0, 1%, 44%);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
 input{
     padding: 0.75rem;
-    width: 100px;
+    padding-right: 1rem;
+    width: 100%; 
+    max-width: 120px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    letter-spacing: 3px;
+    
+}
+
+.warning{
+    margin: 0;
+    text-transform: capitalize;
+    color: hsl(0, 100%, 67%);
+    font-size: 12px;
+    font-weight:500;
+    visibility: hidden;
+    font-style: italic;
+}
+
+svg{
+    background-color: hsl(259, 100%, 65%);
+    padding: 10px;
+    border-radius: 100%;
+    cursor: pointer;
+    transition-duration: 100ms;
+    position: absolute;
+    top: 30%;
+    left: 70%;
+}
+button{
+    width: 0;
+    height: 0;
+    padding: 0;
+    outline: 0;
+    border-radius: 100%;
+}
+
+svg:hover{
+    background-color: black;
+}
+
+
+.calc{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:flex-start;
+    margin: 0;
+}
+
+.calculated{
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 68px;
+    margin: 0;
+}
+
+.calculated span{
+    color: hsl(259, 100%, 65%);
+}
+
+@media screen and (max-width: 768px) {
+    
+    .container {
+        padding: 30px 5%; 
+    }
+    
+    .champ {
+        margin-right: 5%;
+        flex-basis: 40%; 
+    }
+
+    .calculated{
+        font-size: 48px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    
+    .container {
+        padding: 20px 5%; 
+    }
+    
+    .date {
+        flex-direction: column; 
+    }
+    
+    .champ {
+        margin-right: 0; 
+        margin-bottom: 10px;
+        flex-basis: auto; 
+    }
+
+    .calculated{
+        font-size: 48px;
+    }
 }
